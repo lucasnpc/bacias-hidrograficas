@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">bacias_hidrograficas</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="txt_bacia_serra">A UGRHI-1 está localizada no noroeste do estado de São Paulo. Possui como principais rios o Rio
+    Sapucaí-Guaçu e Sapucaí-Mirim e tem como limítrofes a UGRHI-2(Paraíba do Sul), ao sul, e é margeada pelo estado de Minas Gerais.</string>
+    <string name="txt_map_sp">A UGRHI-1 Serra da Mantiqueira caracteriza-se por sua localização no leste paulista, na área limítrofe
+    com o estado de Minas Gerais, além disto é caracterizada como a menor UGRHI...</string>
+</resources>
