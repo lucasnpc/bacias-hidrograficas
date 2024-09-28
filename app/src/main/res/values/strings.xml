@@ -1,13 +1,44 @@
 <resources>
-    <string name="app_name">bacias_hidrograficas</string>
+    <string name="app_name">Bacias Hidrográficas</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="txt_bacia_serra">A UGRHI-1 está localizada no noroeste do estado de São Paulo. Possui como principais rios o Rio
-    Sapucaí-Guaçu e Sapucaí-Mirim e tem como limítrofes a UGRHI-2(Paraíba do Sul), ao sul, e é margeada pelo estado de Minas Gerais.</string>
-    <string name="txt_map_sp">A UGRHI-1 Serra da Mantiqueira caracteriza-se por sua localização no leste paulista, na área limítrofe
-    com o estado de Minas Gerais, além disto é caracterizada como a menor UGRHI...</string>
+    <string name="txt_bacia_serra"><b>A UGRHI-1 está localizada no noroeste do estado de São Paulo. Possui como principais rios o Rio
+        Sapucaí-Guaçu e Sapucaí-Mirim e tem como limítrofes a UGRHI-2(Paraíba do Sul), ao sul, e é margeada pelo estado de Minas Gerais…</b> (clique para continuar lendo).</string>
+    <string name="txt_map_sp"><b>A UGRHI-1 Serra da Mantiqueira caracteriza-se por \nsua localização no leste paulista, na área limítrofe1
+        com o estado de Minas Gerais, além disto é caracterizada como a menor UGRHI…</b> (clique para continuar lendo)."</string>
+
+    <string name="descricao_bacias_sp"><![CDATA[
+    A UGRHI–1 Serra da Mantiqueira (UGRHI-1) caracteriza-se por sua localização no
+        leste paulista, na área limítrofe com o estado de Minas Gerais. Além disso, é caracterizada
+        como a menor URGHI do estado, abrangendo apenas 3 (três) municípios, sendo eles
+        Campos do Jordão, São Bento do Sapucaí de Santo Antônio do Pinhal. Os principais rios
+        que a compõem são Sapucaí-Guaçu, Sapucaí-Mirim e ribeirões da Cachoeira, do Paiol
+        Velho e do Paiol Grande.<br><br>A UGRHI 1 é divida em duas sub bacias principais: I - Rio Sapucaí-Mirim e II – Rio
+        Sapucaí-Guaçu e sua área total é de 676,12 Km² (SEADE, 2015) que representa 0,28% do
+        estado de São Paulo.<br><br>A unidade do rio Sapucaí-Guaçu possui uma área de 289,27 Km², 42,79% da
+        UGRHI-1, e aproximadamente 90% da área está inseria do município de Campos do Jordão
+        e os outros 10% em São Bento do Sapucaí. Enquanto a unidade do rio Sapucaí-Mirim
+        apresenta 386,85 Km², 57,22%, e corresponde à totalidade do município de Santo Antônio
+        do Pinhal, 90% do território de São Bento do Sapucaí e apenas 10% de Campos do Jordão.]]></string>
+    <string name="descricao_recursos_hidricos"><![CDATA[
+    A Política Nacional de Recursos Hídricos, estabelecida pela Lei Federal nº. 9.433, de
+        8 de janeiro de 1997 (BRASIL, 1997), definiu que a gestão dos recursos hídricos seria feita
+        por bacias hidrográficas. A Constituição Federal (BRASIL, 1988) determina que a
+        dominialidade seja por corpos d’água, ou seja, por rios, lagos e águas subterrâneas. Dessa
+        forma, têm-se dois níveis de domínio e um impasse a ser negociado. Os níveis de domínio
+        são:<br><br>° Domínio da União: lagos, rios e quaisquer correntes em terrenos de seu domínio ou
+        que banhem mais de um Estado, sirvam de limites com outros Países, ou se
+        estendam a território estrangeiro ou dele provenham, bem como terrenos marginais e
+        as praias fluviais. (Art. 20, inciso III).<br><br>° Domínio dos Estados: águas superficiais e subterrâneas, fluentes, emergentes e em
+        depósito, ressalvadas nesse caso, na forma da lei, as decorrentes de obras da União
+        (Art.26, inciso I).<br><br>A UGRHI-1 está localizada no noroeste do estado de São Paulo. Possui como
+        principais rios o Rio Sapucaí-Guaçu e Sapucaí-Mirim e tem como limítrofes a UGRHI- 2
+        (Paraíba do Sul), ao sul, e é margeada pelo estado de Minas Gerais. ]]> </string>
+    <string name="title_activity_maps">Map</string>
+    <string name="txt_inicio">Pontos com sensores pluviométricos e fluviométricos na região
+    da Bacia da Serra da Mantiqueira</string>
 </resources>
