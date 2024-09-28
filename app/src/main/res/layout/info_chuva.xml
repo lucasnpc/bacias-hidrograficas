@@ -9,7 +9,7 @@
     android:background="@color/colorImageback">
 
     <ImageView
-        android:id="@+id/image_teste"
+        android:id="@+id/rain_info_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"

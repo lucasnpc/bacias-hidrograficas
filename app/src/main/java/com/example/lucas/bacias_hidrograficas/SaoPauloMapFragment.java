@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Fragment2 extends Fragment {
+public class SaoPauloMapFragment extends Fragment {
 
     @Nullable
     @Override
@@ -21,7 +21,7 @@ public class Fragment2 extends Fragment {
         TextView textView = view.findViewById(R.id.textView3);
         textView.setOnClickListener(view1 -> {
             Intent intent;
-            intent = new Intent(getContext(), desc_map_sp.class);
+            intent = new Intent(getContext(), MapDescriptionSP.class);
             startActivity(intent);
         });
 

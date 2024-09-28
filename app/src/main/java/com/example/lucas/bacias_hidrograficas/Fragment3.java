@@ -21,7 +21,7 @@ public class Fragment3 extends Fragment {
         TextView textView = view.findViewById(R.id.textView2);
         textView.setOnClickListener(view1 -> {
             Intent intent;
-            intent = new Intent(getContext(), desc_recursos_hidricos.class);
+            intent = new Intent(getContext(), WaterResourcesDescription.class);
             startActivity(intent);
         });
 

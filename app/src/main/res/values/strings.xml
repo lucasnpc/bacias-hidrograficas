@@ -41,4 +41,8 @@
     <string name="title_activity_maps">Map</string>
     <string name="txt_inicio">Pontos com sensores pluviométricos e fluviométricos na região
     da Bacia da Serra da Mantiqueira</string>
+    <string name="map_saopaulo_description">Mapa de São Paulo</string>
+    <string name="water_serramantiqueira_description">Mapa hidríco Serra da mantiqueira</string>
+    <string name="serramantiqueira_soil_description">Ocupação do solo serra da mantiqueira</string>
+    <string name="soil_use_description">Classe de uso ocupação do solo</string>
 </resources>

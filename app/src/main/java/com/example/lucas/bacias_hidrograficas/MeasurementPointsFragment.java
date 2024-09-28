@@ -20,7 +20,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class Fragment1 extends Fragment implements OnMapReadyCallback {
+public class MeasurementPointsFragment extends Fragment implements OnMapReadyCallback {
 
     MapView mapView;
     Button button;
@@ -32,7 +32,7 @@ public class Fragment1 extends Fragment implements OnMapReadyCallback {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.frag1_layout, null);
         button = view.findViewById(R.id.b_chuva);
-        imageView = view.findViewById(R.id.image_teste);
+        imageView = view.findViewById(R.id.rain_info_image);
         relativeLayout = view.findViewById(R.id.info_chuva);
 
         mapView = view.findViewById(R.id.mapView);

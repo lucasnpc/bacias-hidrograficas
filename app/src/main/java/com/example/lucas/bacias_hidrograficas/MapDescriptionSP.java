@@ -9,7 +9,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-public class desc_recursos_hidricos extends AppCompatActivity {
+public class MapDescriptionSP extends AppCompatActivity {
 
     WebView webView;
     Button button;
@@ -17,25 +17,24 @@ public class desc_recursos_hidricos extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.desc_recursos_hidricos);
+        setContentView(R.layout.desc_map_sp);
         button = findViewById(R.id.b_close);
-
         button.setOnClickListener(view -> finish());
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        webView = findViewById(R.id.webview);
         setTitle("Descrição");
 
+        webView = findViewById(R.id.webview2);
         String text = "<html><body align=\"justify\" style=\"font-size:15px\">"
-                + getString(R.string.descricao_recursos_hidricos)
+                + getString(R.string.descricao_bacias_sp)
                 + "</body></html>";
         webView.loadData(text, "text/html", "UTF-8");
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = findViewById(R.id.desc_rec_hidricos);
+        DrawerLayout drawer = findViewById(R.id.desc_map_sp);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {

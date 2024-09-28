@@ -24,11 +24,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".desc_map_sp"
+            android:name=".MapDescriptionSP"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".desc_recursos_hidricos"
+            android:name=".WaterResourcesDescription"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <!--

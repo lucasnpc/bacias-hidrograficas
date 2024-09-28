@@ -17,12 +17,12 @@
             android:id="@+id/nav_ocupacao"
             android:title="Uso e ocupação do solo" />
 
-            <item
-                android:id="@+id/nav_industria"
-                android:title="Indústria" />
-            <item
-                android:id="@+id/nav_sair"
-                android:title="Sair"></item>
+        <item
+            android:id="@+id/nav_industria"
+            android:title="Indústria" />
+        <item
+            android:id="@+id/nav_sair"
+            android:title="Sair" />
     </group>
 
 
