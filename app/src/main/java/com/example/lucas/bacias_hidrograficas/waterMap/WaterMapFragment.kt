@@ -5,9 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.example.lucas.bacias_hidrograficas.R
+import com.example.lucas.bacias_hidrograficas.databinding.Frag3LayoutBinding
 import com.example.lucas.bacias_hidrograficas.waterMap.description.WaterResourcesDescription
 
 class WaterMapFragment : Fragment() {
@@ -16,14 +15,17 @@ class WaterMapFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.frag3_layout, null)
+        val view = Frag3LayoutBinding.inflate(layoutInflater)
 
-        val textView = view.findViewById<TextView>(R.id.textView2)
-        textView.setOnClickListener { view1: View? ->
+        view.textView2.setOnClickListener {
             val intent = Intent(context, WaterResourcesDescription::class.java)
             startActivity(intent)
         }
 
-        return (view)
+        return (view.root)
+    }
+
+    companion object {
+        const val TAG = "WaterMapFragment"
     }
 }

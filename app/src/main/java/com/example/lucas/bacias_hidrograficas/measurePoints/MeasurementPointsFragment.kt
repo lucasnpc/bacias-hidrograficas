@@ -154,4 +154,8 @@ class MeasurementPointsFragment : Fragment(), OnMapReadyCallback {
             binding?.infoRain?.rainInfoImage?.setImageResource(drawable)
         }
     }
+
+    companion object {
+        const val TAG = "MeasurementPointsFragment"
+    }
 }

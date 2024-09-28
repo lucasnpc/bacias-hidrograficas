@@ -2,14 +2,13 @@ package com.example.lucas.bacias_hidrograficas
 
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import com.example.lucas.bacias_hidrograficas.databinding.ActivityMainBinding
 import com.example.lucas.bacias_hidrograficas.measurePoints.MeasurementPointsFragment
 import com.example.lucas.bacias_hidrograficas.saoPauloMap.SaoPauloMapFragment
 import com.example.lucas.bacias_hidrograficas.soilUse.SoilUseClassFragment
@@ -17,16 +16,17 @@ import com.example.lucas.bacias_hidrograficas.waterMap.WaterMapFragment
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-    private var idControl: Int = 0
 
-    private val drawer: DrawerLayout by lazy {
-        findViewById(R.id.drawer_layout)
+    private val binding: ActivityMainBinding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
     }
+
+    private var idControl: Int = 0
 
     private val onBackPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
-            if (drawer.isDrawerOpen(GravityCompat.START)) {
-                drawer.closeDrawer(GravityCompat.START)
+            if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                binding.drawerLayout.closeDrawer(GravityCompat.START)
             } else {
                 if (supportFragmentManager.backStackEntryCount > 0) {
                     supportFragmentManager.popBackStack()
@@ -39,20 +39,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
+        setContentView(binding.root)
+        val toolbar = binding.appbarMain.toolbar
         setSupportActionBar(toolbar)
 
-        val drawer = findViewById<View>(R.id.drawer_layout) as DrawerLayout
+        val drawer = binding.drawerLayout
         val toggle = ActionBarDrawerToggle(
             this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
         )
         drawer.addDrawerListener(toggle)
         toggle.syncState()
 
-        val navigationView = findViewById<View>(R.id.nav_view) as NavigationView
-        navigationView.setNavigationItemSelectedListener(this)
-        navigationView.setCheckedItem(R.id.nav_inicio)
+        binding.navView.setNavigationItemSelectedListener(this)
+        binding.navView.setCheckedItem(R.id.nav_inicio)
         idControl = R.id.nav_inicio
 
         onBackPressedDispatcher.addCallback(this, onBackPressedCallback)
@@ -61,21 +60,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val measurementPointsFragment =
                 MeasurementPointsFragment()
             val fragmentTransaction = supportFragmentManager.beginTransaction()
-            fragmentTransaction.add(R.id.content_main, measurementPointsFragment)
+            fragmentTransaction.add(
+                R.id.content_main,
+                measurementPointsFragment
+            )
+            fragmentTransaction.addToBackStack(MeasurementPointsFragment.TAG)
             fragmentTransaction.commit()
             title = "Início"
         }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        drawer.closeDrawer(GravityCompat.START)
+        binding.drawerLayout.closeDrawer(GravityCompat.START)
         when (val id = item.itemId) {
             R.id.nav_inicio -> {
                 if (id == idControl) return false
                 idControl = id
                 val measurementPointsFragment =
                     MeasurementPointsFragment()
-                selecionaFragmento(measurementPointsFragment, null)
+                selectFragment(measurementPointsFragment, null, MeasurementPointsFragment.TAG)
                 title = "Início"
             }
 
@@ -84,7 +87,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 idControl = id
                 val saoPauloMapFragment =
                     SaoPauloMapFragment()
-                selecionaFragmento(saoPauloMapFragment, "pilha")
+                selectFragment(saoPauloMapFragment, "pilha", SaoPauloMapFragment.TAG)
                 title = "Bacias de São Paulo"
             }
 
@@ -92,7 +95,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 if (id == idControl) return false
                 idControl = id
                 val waterMapFragment = WaterMapFragment()
-                selecionaFragmento(waterMapFragment, "pilha")
+                selectFragment(waterMapFragment, "pilha", WaterMapFragment.TAG)
                 title = "Bacia Serra da Mantiqueira"
             }
 
@@ -100,7 +103,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 if (id == idControl) return false
                 idControl = id
                 val soilUseClassFragment = SoilUseClassFragment()
-                selecionaFragmento(soilUseClassFragment, "pilha")
+                selectFragment(soilUseClassFragment, "pilha", SoilUseClassFragment.TAG)
                 title = "Ocupaçao do solo"
             }
 
@@ -117,9 +120,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-    private fun selecionaFragmento(fragment: Fragment, string: String?) {
+    private fun selectFragment(fragment: Fragment, string: String?, tag: String) {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.content_main, fragment)
+        fragmentTransaction.replace(R.id.content_main, fragment, tag)
         fragmentTransaction.addToBackStack(string)
         fragmentTransaction.commit()
     }

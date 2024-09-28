@@ -2,7 +2,6 @@ package com.example.lucas.bacias_hidrograficas.saoPauloMap.description
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import com.example.lucas.bacias_hidrograficas.R
 import com.example.lucas.bacias_hidrograficas.databinding.DescMapSpActivityBinding
 
@@ -17,8 +16,7 @@ class MapDescriptionSP : AppCompatActivity() {
         setContentView(binding.root)
         binding.close.bClose.setOnClickListener { finish() }
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
+        setSupportActionBar(binding.content.toolbar)
         title = "Descrição"
 
         val text = ("<html><body align=\"justify\" style=\"font-size:15px\">"

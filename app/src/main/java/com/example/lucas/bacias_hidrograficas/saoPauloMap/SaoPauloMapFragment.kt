@@ -25,4 +25,8 @@ class SaoPauloMapFragment : Fragment() {
 
         return (view.root)
     }
+
+    companion object {
+        const val TAG = "SaoPauloMapFragment"
+    }
 }
