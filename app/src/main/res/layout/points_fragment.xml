@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frag1_layout"
+    android:id="@+id/points_fragment"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -36,11 +36,13 @@
     </LinearLayout>
 
     <include
+        android:id="@+id/info_rain"
         layout="@layout/info_chuva"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <include
+        android:id="@+id/rain"
         layout="@layout/button_chuva"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

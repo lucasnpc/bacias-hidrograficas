@@ -3,16 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/desc_map_sp"
+    android:id="@+id/desc_map_sp_activity"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
     <include
+        android:id="@+id/content"
         layout="@layout/desc_map_sp_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </include>
 
     <include
+        android:id="@+id/close"
         layout="@layout/button_close"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
