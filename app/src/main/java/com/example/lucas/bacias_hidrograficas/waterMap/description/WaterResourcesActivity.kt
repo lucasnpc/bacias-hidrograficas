@@ -23,6 +23,7 @@ class WaterResourcesActivity : AppCompatActivity() {
         val text = ("<html><body align=\"justify\" style=\"font-size:15px\">"
                 + getString(R.string.descricao_recursos_hidricos)
                 + "</body></html>")
+        binding.content.webview.settings.javaScriptEnabled = true
         binding.content.webview.loadData(text, "text/html", "UTF-8")
     }
 }
