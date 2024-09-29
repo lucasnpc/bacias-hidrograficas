@@ -24,11 +24,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".saoPauloMap.description.MapDescriptionSP"
+            android:name=".saoPauloMap.description.MapSPActivity"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".waterMap.description.WaterResourcesDescription"
+            android:name=".waterMap.description.WaterResourcesActivity"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <!--

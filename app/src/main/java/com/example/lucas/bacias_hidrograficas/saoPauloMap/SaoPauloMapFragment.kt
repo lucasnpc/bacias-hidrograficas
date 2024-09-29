@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.lucas.bacias_hidrograficas.databinding.SpMapFragmentBinding
-import com.example.lucas.bacias_hidrograficas.saoPauloMap.description.MapDescriptionSP
+import com.example.lucas.bacias_hidrograficas.saoPauloMap.description.MapSPActivity
 
 class SaoPauloMapFragment : Fragment() {
 
@@ -19,7 +19,7 @@ class SaoPauloMapFragment : Fragment() {
         val view = SpMapFragmentBinding.inflate(layoutInflater)
 
         view.textView3.setOnClickListener {
-            val intent = Intent(context, MapDescriptionSP::class.java)
+            val intent = Intent(context, MapSPActivity::class.java)
             startActivity(intent)
         }
 

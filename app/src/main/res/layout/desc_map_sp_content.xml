@@ -5,7 +5,7 @@
     android:id="@+id/desc_map_sp_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".saoPauloMap.description.MapDescriptionSP">
+    tools:context=".saoPauloMap.description.MapSPActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar_desc_map_sp"

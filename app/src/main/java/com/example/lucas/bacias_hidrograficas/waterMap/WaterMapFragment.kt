@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.lucas.bacias_hidrograficas.databinding.Frag3LayoutBinding
-import com.example.lucas.bacias_hidrograficas.waterMap.description.WaterResourcesDescription
+import com.example.lucas.bacias_hidrograficas.waterMap.description.WaterResourcesActivity
 
 class WaterMapFragment : Fragment() {
     override fun onCreateView(
@@ -18,7 +18,7 @@ class WaterMapFragment : Fragment() {
         val view = Frag3LayoutBinding.inflate(layoutInflater)
 
         view.textView2.setOnClickListener {
-            val intent = Intent(context, WaterResourcesDescription::class.java)
+            val intent = Intent(context, WaterResourcesActivity::class.java)
             startActivity(intent)
         }
 
